@@ -300,6 +300,25 @@ public class ExercicesPOO {
 // Désolé c'est vraiment pas Beau cette méthode le dry n'est pas respecté
     }
 
+    //EXERCICE 11 "Monnaie en Propre"
+
+    public static void monnaiePropre(){
+
+        double[] monnaie = new double[]{500.0,200.0,100.0,50.0,20.0,10.0,5.0,2.0,1.0,0.50,0.20,0.10,0.05,0.02,0.01};
+        double montant=demandeDouble();
+        double cpt=0;
+
+            for (int i = 0; i < monnaie.length; i++) {
+                if(montant/monnaie[i]>=0){
+                    cpt=(int)(montant/monnaie[i]);
+                    montant-=(cpt*monnaie[i]);
+                    System.out.println("Votre montant se décompose en "+cpt+" fois "+monnaie[i]+"€");
+                }
+            }
+
+
+        }
+
     //EXERCICE 12 "Temperature"
 
     public static void temperature(double[] params){
@@ -337,7 +356,7 @@ public class ExercicesPOO {
 
     public static void main(String[] args) {
         double[] params = new double[]{-12.0,5.0,25.0,1.0,-0.00255,-0.25};// me sert de tableau pour les exos avec les listes
-        tri(params);
+        monnaiePropre();
 
     }
 
